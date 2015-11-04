@@ -13,21 +13,21 @@ import java.sql.Date;
  */
 public class CadastroFuncionarioBean {
     private String nome;
-    private Date nascimento;
-    private char sexo;
+    private String nascimento;
+    private String sexo;
     private String rg;
     private String cpf;
     private String emissor;
-    private Date emissao;
+    private String emissao;
     private String pais;
     private String cidade;
     private String estado;
-    private String rua;
     private String cep;
     private int numero;
     private String complemento;
     private String telefone;
     private String celular;
+    private int filial;
 
     public String getNome() {
         return nome;
@@ -37,19 +37,19 @@ public class CadastroFuncionarioBean {
         this.nome = nome;
     }
 
-    public Date getNascimento() {
+    public String getNascimento() {
         return nascimento;
     }
 
-    public void setNascimento(Date nascimento) {
+    public void setNascimento(String nascimento) {
         this.nascimento = nascimento;
     }
 
-    public char getSexo() {
+    public String getSexo() {
         return sexo;
     }
 
-    public void setSexo(char sexo) {
+    public void setSexo(String sexo) {
         this.sexo = sexo;
     }
 
@@ -77,11 +77,11 @@ public class CadastroFuncionarioBean {
         this.emissor = emissor;
     }
 
-    public Date getEmissao() {
+    public String getEmissao() {
         return emissao;
     }
 
-    public void setEmissao(Date emissao) {
+    public void setEmissao(String emissao) {
         this.emissao = emissao;
     }
 
@@ -107,14 +107,6 @@ public class CadastroFuncionarioBean {
 
     public void setEstado(String estado) {
         this.estado = estado;
-    }
-
-    public String getRua() {
-        return rua;
-    }
-
-    public void setRua(String rua) {
-        this.rua = rua;
     }
 
     public String getCep() {
@@ -155,5 +147,13 @@ public class CadastroFuncionarioBean {
 
     public void setCelular(String celular) {
         this.celular = celular;
+    }
+
+    public int getFilial() {
+        return filial;
+    }
+
+    public void setFilial(int filial) {
+        this.filial = filial;
     }
 }

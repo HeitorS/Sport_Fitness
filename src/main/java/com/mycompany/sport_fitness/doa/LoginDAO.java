@@ -21,7 +21,7 @@ public class LoginDAO extends Conexao {
     private ResultSet rs = null;
     private PreparedStatement pst = null;
 
-    public void create(LoginBean user) {
+    public boolean create(LoginBean user) {
         String sql = "insert into Usuarios(nameUser,pasUser) value(?,?)";
 
         try {
@@ -30,11 +30,13 @@ public class LoginDAO extends Conexao {
             pst.setString(1, user.getNameUser());
             pst.setString(2, user.getPasUser());
 
-            pst.executeQuery();
+            pst.execute();
             con.close();
+            return true;
         } catch (SQLException | ClassNotFoundException error) {
             System.out.println(error);
         }
+        return false;
     }
     
     public void update(String nameUser, String pasUser){
