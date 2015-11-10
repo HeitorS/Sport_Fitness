@@ -3,8 +3,6 @@ html{
     position: relative;
     background: url("../img/Site_04.jpg") no-repeat fixed;
     background-size:cover;
-
-
 }
 div.imagem_fundo{
     background: url("img/Site_04.jpg") no-repeat;
@@ -44,8 +42,6 @@ p.nome_funcionario{
 fieldset.principais{
     font-family: "Trebuchet MS","Myriad Pro",Arial,sans-serif;
     position: absolute;
-    /*	top: 0px;*/
-
     width: 55%;
     padding: 30px 6% 60px 6%;
     margin: 0 0 35px 0;
@@ -75,7 +71,6 @@ p.titulo{
 }
 p.financeiro{
     font-size: 20px;
-
 }
 div.botao_centro{
     display: block;
