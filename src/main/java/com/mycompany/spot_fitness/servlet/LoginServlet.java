@@ -58,7 +58,7 @@ public class LoginServlet extends HttpServlet {
             if (verdade) {
                 response.sendRedirect("html/Home.html");
             } else {
-                //chamar erro
+                response.sendRedirect("jsp/erroLogin.jsp");
             }
         } catch (Exception error) {
             System.out.println(error);

@@ -9,9 +9,6 @@ import com.mycompany.sport_fitness.doa.CadastroFuncionarioDAO;
 import com.mycompany.spot_fitness.entidade.CadastroFuncionarioBean;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.LinkedList;
 import java.util.List;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -73,14 +70,10 @@ public class FuncionarioServlet extends HttpServlet {
         try {
             CadastroFuncionarioDAO funcionario = new CadastroFuncionarioDAO();
             boolean verd = funcionario.create(fun);
-            
-            if (verd) {
-                List<CadastroFuncionarioBean> lista = funcionario.read();
-                request.setAttribute("lista", lista);
-                RequestDispatcher saida = request.getRequestDispatcher("jsp/ListarFuncionarios.jsp");
-                PrintWriter saida2 = response.getWriter();
-                saida2.println("../html/Lista");
-                saida.forward(request, response);
+            if(verd){
+                response.sendRedirect("html/Home.html");
+            }else{
+                response.sendRedirect("jsp/erroFuncionario.jsp");
             }
         } catch (Exception e) {
             //chamar erro

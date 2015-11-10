@@ -6,6 +6,7 @@
 package com.mycompany.sport_fitness.doa;
 
 import com.mycompany.spot_fitness.entidade.CadastroFuncionarioBean;
+import com.mycompany.spot_fitness.entidade.LoginBean;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -57,6 +58,27 @@ public class CadastroFuncionarioDAO extends Conexao {
             pst.setInt(16, user.getFilial());
 
             pst.execute();
+            System.out.println("\n\n\n\n\n Funcionário cadastrado com sucesso\n\n\n\n\n\n\n");
+            int cont = 0;
+            String userName = "";
+            for (int i = 0; i < user.getNome().length(); i++) {
+                if (user.getNome().charAt(i) == ' ') {
+                    if(cont < 1){
+                    userName += user.getNome().charAt(i);
+                    }
+                    cont++;
+                } else if (cont < 2) {
+                    userName += user.getNome().charAt(i);
+                } else {
+                    break;
+                }
+            }
+            System.out.println("\n\n\n\n\n\n\n Login do usuário criado com sucesso: " + userName + "\n\n\n\n\n\n\n\n");
+            LoginBean login = new LoginBean();
+            login.setNameUser(userName);
+            login.setPasUser("1234");
+            LoginDAO criar = new LoginDAO();
+            criar.create(login);
             con.close();
             return true;
         } catch (SQLException | ClassNotFoundException error) {
@@ -91,7 +113,7 @@ public class CadastroFuncionarioDAO extends Conexao {
                 fun.setTelefone(rs.getString("telefone"));
                 fun.setCelular(rs.getString("celular"));
                 fun.setFilial(rs.getInt("filial"));
-                
+
                 funcionarios.add(fun);
             }
             return funcionarios;
