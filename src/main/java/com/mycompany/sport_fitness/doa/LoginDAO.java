@@ -22,13 +22,15 @@ public class LoginDAO extends Conexao {
     private PreparedStatement pst = null;
 
     public boolean create(LoginBean user) {
-        String sql = "insert into Usuarios(nameUser,pasUser) value(?,?)";
+        String sql = "insert into Usuarios(nameUser,pasUser,habilitado,codFun) value(?,?,?,?)";
 
         try {
             con = conexao();
             pst = con.prepareStatement(sql);
             pst.setString(1, user.getNameUser());
             pst.setString(2, user.getPasUser());
+            pst.setBoolean(3, true);
+            pst.setInt(4, user.getCodFun());
 
             pst.execute();
             con.close();

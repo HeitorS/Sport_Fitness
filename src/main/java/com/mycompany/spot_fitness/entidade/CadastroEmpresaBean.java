@@ -11,14 +11,13 @@ package com.mycompany.spot_fitness.entidade;
  */
 public class CadastroEmpresaBean {
 
-    private String razaoSocial;
     private String cnpj;
     private String cei;
+    private String razaoSocial;
     private String nomeFantasia;
-    private String gerente;
-    private String logradouro;
+    private String dono;
     private String endereco;
-    private String numero;
+    private int numero;
     private String complemento;
     private String bairro;
     private String cep;
@@ -27,22 +26,7 @@ public class CadastroEmpresaBean {
     private String telefone;
     private String celular;
     private String email;
-
-    public String getEndereco() {
-        return endereco;
-    }
-
-    public void setEndereco(String endereco) {
-        this.endereco = endereco;
-    }
-
-    public String getRazaoSocial() {
-        return razaoSocial;
-    }
-
-    public void setRazaoSocial(String razaoSocial) {
-        this.razaoSocial = razaoSocial;
-    }
+    private boolean habilitada;
 
     public String getCnpj() {
         return cnpj;
@@ -60,6 +44,14 @@ public class CadastroEmpresaBean {
         this.cei = cei;
     }
 
+    public String getRazaoSocial() {
+        return razaoSocial;
+    }
+
+    public void setRazaoSocial(String razaoSocial) {
+        this.razaoSocial = razaoSocial;
+    }
+
     public String getNomeFantasia() {
         return nomeFantasia;
     }
@@ -68,27 +60,27 @@ public class CadastroEmpresaBean {
         this.nomeFantasia = nomeFantasia;
     }
 
-    public String getGerente() {
-        return gerente;
+    public String getDono() {
+        return dono;
     }
 
-    public void setGerente(String gerente) {
-        this.gerente = gerente;
+    public void setDono(String dono) {
+        this.dono = dono;
     }
 
-    public String getLogradouro() {
-        return logradouro;
+    public String getEndereco() {
+        return endereco;
     }
 
-    public void setLogradouro(String logradouro) {
-        this.logradouro = logradouro;
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
     }
 
-    public String getNumero() {
+    public int getNumero() {
         return numero;
     }
 
-    public void setNumero(String numero) {
+    public void setNumero(int numero) {
         this.numero = numero;
     }
 
@@ -154,6 +146,14 @@ public class CadastroEmpresaBean {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public boolean isHabilitada() {
+        return habilitada;
+    }
+
+    public void setHabilitada(boolean habilitada) {
+        this.habilitada = habilitada;
     }
 
 }

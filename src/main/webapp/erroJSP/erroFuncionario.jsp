@@ -1,6 +1,6 @@
 <%-- 
-    Document   : erroLogin
-    Created on : 10/11/2015, 18:03:08
+    Document   : erroCadastro
+    Created on : 10/11/2015, 18:27:17
     Author     : heito
 --%>
 
@@ -27,7 +27,7 @@
                 padding-right: 50px;
                 padding-bottom: 10px;
                 top: 5%;
-                left: 20%;
+                left: 25%;
                 background: #C1CDCD;
             }
             #error div{
@@ -52,11 +52,11 @@
     <body>
         <div id="error">
             <div></div>
-            <h1>Desculpe, usuário ou senha não cadastrado no sistema!</h1>
+            <h1>Desculpe ocorreu um erro no sistema!</h1>
             <img src="../img/Error404.png" width="70" height="70"/>
-            <h3>Tente efetuar o login novamente, caso o erro venha a persistir<br>
+            <h3>Tente efetuar o cadastro novamente, caso o erro venha a persistir<br>
                 entre em contato com o Suporte do site! </h3>
-            <a href="../html/Login.html"> <button>Voltar</button></a>
+            <a href="../jsp/Cadastro_funcionario.jsp"> <button>Voltar</button></a>
         </div>
     </body>
 </html>

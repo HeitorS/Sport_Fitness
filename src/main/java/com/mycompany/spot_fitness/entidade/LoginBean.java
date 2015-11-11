@@ -5,16 +5,18 @@
  */
 package com.mycompany.spot_fitness.entidade;
 
-
 /**
  *
  * @author heito
  */
 public class LoginBean {
+
     private int codUser;
     private String nameUser;
     private String pasUser;
-    
+    private boolean habilitado;
+    private int codFun;
+
     public int getCodUser() {
         return codUser;
     }
@@ -38,5 +40,21 @@ public class LoginBean {
     public void setPasUser(String pasUser) {
         this.pasUser = pasUser;
     }
-    
+
+    public boolean isHabilitado() {
+        return habilitado;
+    }
+
+    public void setHabilitado(boolean habilitado) {
+        this.habilitado = habilitado;
+    }
+
+    public int getCodFun() {
+        return codFun;
+    }
+
+    public void setCodFun(int codFun) {
+        this.codFun = codFun;
+    }
+
 }

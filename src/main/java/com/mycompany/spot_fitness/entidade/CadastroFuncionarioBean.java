@@ -5,8 +5,6 @@
  */
 package com.mycompany.spot_fitness.entidade;
 
-import java.sql.Date;
-
 /**
  *
  * @author heito
