@@ -10,13 +10,12 @@ package com.mycompany.spot_fitness.entidade;
  * @author heitor
  */
 public class CadastroProdutoBean {
-
     // dados principais
 
     private int codigo;
     private String nome;
     private String categoria;
-    private String infoComplementar;
+    private String descricao;
     private String fabricante;
     private String fornecedor;
     private double altura;
@@ -26,7 +25,7 @@ public class CadastroProdutoBean {
     private double valorCompra;
     private double valorVenda;
     private double lucro;
-    // 
+   
 
     public int getCodigo() {
         return codigo;
@@ -50,14 +49,6 @@ public class CadastroProdutoBean {
 
     public void setCategoria(String categoria) {
         this.categoria = categoria;
-    }
-
-    public String getInfoComplementar() {
-        return infoComplementar;
-    }
-
-    public void setInfoComplementar(String infoComplementar) {
-        this.infoComplementar = infoComplementar;
     }
 
     public String getFabricante() {
@@ -124,4 +115,13 @@ public class CadastroProdutoBean {
         this.lucro = lucro;
     }
 
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
+    
 }
