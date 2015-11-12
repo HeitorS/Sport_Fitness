@@ -9,7 +9,6 @@
 <html lang = "pt-br">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         <meta name="keywords" content="html5, css3, form, switch, animation, :target, pseudo-class" />
         <meta name="author" content="Software Coffe" />
         <title>Sport Fitness</title>
@@ -18,8 +17,6 @@
         <script src="../js/Home.js" type="text/javascript"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
     </head>
     <body>
@@ -42,18 +39,18 @@
             <nav id="nav">
                 <div id="nav-wrapper">
                     <ul>
-                        <li><a href="Home.html">Home</a></li><li>
-                            <a href="Acessorios.html">Acessorios</a></li><li>
-                            <a href="Suportes.html">Suportes</a></li><li>
-                            <a href="Produtos.html">Produtos</a></li><li>
-                            <a href="Servicos.html">Servicos</a></li><li>
-                            <a href="Roupas.html">Roupas</a></li><li>
+                        <li><a href="Home.jsp">Home</a></li><li>
+                            <a href="Acessorios.jsp">Acessórios</a></li><li>
+                            <a href="Suportes.jsp">Suportes</a></li><li>
+                            <a href="Produtos.jsp">Produtos</a></li><li>
+                            <a href="Servicos.jsp">Serviços</a></li><li>
+                            <a href="Roupas.jsp">Roupas</a></li><li>
                             <a href="" style="font-size: 18pt;"><b>+</b>
                                 <img src="../img/arrow_dowm.png" height="20" width="20"/></a>
                             <ul>
-                                <li><a href="Cadastro_empresa.html">Empresa</a></li>
-                                <li><a href="Cadastro_produto.html">Produto</a></li>
-                                <li><a href="Cadastro_funcionario.html">Funcionario</a></li>
+                                <li><a href="Cadastro_empresa.jsp">Empresa</a></li>
+                                <li><a href="Cadastro_produto.jsp">Produto</a></li>
+                                <li><a href="Cadastro_funcionario.jsp">Funcionário</a></li>
                             </ul>
                         </li>
                     </ul>

@@ -21,29 +21,33 @@ public class CadastroProdutoDAO extends Conexao {
     private PreparedStatement pst = null;
 
     public boolean cadastro(CadastroProdutoBean cadastro) {
-        String sql = "insert into produtos(codigo,nome,categoria,descricao,fabricante,fornecedor,altura,largura,profundidade,valorcompra,valorvenda,lucro) value(?,?,?,?,?,?,?,?,?,?,?,?)";
+        String sql = "insert into produto(codigo,img,nome,categoria,descricao,fabricante,fornecedor,"
+                   + "altura,largura,profundidade,gasto,valorVenda,lucro)"
+                   + " value(?,?,?,?,?,?,?,?,?,?,?,?,?)";
 
         try {
             con = conexao();
             pst = con.prepareStatement(sql);
-            pst.setInt(1, cadastro.getCodigo());
-            pst.setString(2, cadastro.getNome());
-            pst.setString(3, cadastro.getCategoria());
-            pst.setString(4, cadastro.getDescricao());
-            pst.setString(5, cadastro.getFabricante());
-            pst.setString(6, cadastro.getFornecedor());
-            pst.setDouble(7, cadastro.getAltura());
-            pst.setDouble(8, cadastro.getLargura());
-            pst.setDouble(9, cadastro.getProfundidade());
-            pst.setDouble(10, cadastro.getValorCompra());
-            pst.setDouble(11, cadastro.getValorVenda());
-            pst.setDouble(12, cadastro.getLucro());
             
-            pst.executeUpdate();
+            pst.setString(1, cadastro.getCodigo());
+            pst.setBytes(2, cadastro.getImg());
+            pst.setString(3, cadastro.getNome());
+            pst.setString(4, cadastro.getCategoria());
+            pst.setString(5, cadastro.getDescricao());
+            pst.setString(6, cadastro.getFabricante());
+            pst.setString(7, cadastro.getFornecedor());
+            pst.setDouble(8, cadastro.getAltura());
+            pst.setDouble(9, cadastro.getLargura());
+            pst.setDouble(10, cadastro.getProfundidade());
+            pst.setDouble(11, cadastro.getGasto());
+            pst.setDouble(12, cadastro.getValorVenda());
+            pst.setDouble(13, cadastro.getLucro());
+            
+            pst.execute();
             con.close();
             return true;
         } catch (SQLException | ClassNotFoundException error) {
-            System.out.println(error);
+            System.out.println("\n\n\n\n\n"+error+"\n\n\n\n\n");
         }
         return false;
     }

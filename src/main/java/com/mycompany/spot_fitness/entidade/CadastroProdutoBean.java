@@ -10,9 +10,11 @@ package com.mycompany.spot_fitness.entidade;
  * @author heitor
  */
 public class CadastroProdutoBean {
-    // dados principais
 
-    private int codigo;
+    // dados principais
+    private int id;
+    private String codigo;
+    private byte[] img;
     private String nome;
     private String categoria;
     private String descricao;
@@ -22,17 +24,32 @@ public class CadastroProdutoBean {
     private double largura;
     private double profundidade;
     // financeiro
-    private double valorCompra;
+    private double gasto;
     private double valorVenda;
     private double lucro;
-   
 
-    public int getCodigo() {
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getCodigo() {
         return codigo;
     }
 
-    public void setCodigo(int codigo) {
+    public void setCodigo(String codigo) {
         this.codigo = codigo;
+    }
+
+    public byte[] getImg() {
+        return img;
+    }
+
+    public void setImg(byte[] img) {
+        this.img = img;
     }
 
     public String getNome() {
@@ -49,6 +66,14 @@ public class CadastroProdutoBean {
 
     public void setCategoria(String categoria) {
         this.categoria = categoria;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
     }
 
     public String getFabricante() {
@@ -91,12 +116,12 @@ public class CadastroProdutoBean {
         this.profundidade = profundidade;
     }
 
-    public double getValorCompra() {
-        return valorCompra;
+    public double getGasto() {
+        return gasto;
     }
 
-    public void setValorCompra(double valorCompra) {
-        this.valorCompra = valorCompra;
+    public void setGasto(double gasto) {
+        this.gasto = gasto;
     }
 
     public double getValorVenda() {
@@ -115,13 +140,4 @@ public class CadastroProdutoBean {
         this.lucro = lucro;
     }
 
-    public String getDescricao() {
-        return descricao;
-    }
-
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
-    }
-
-    
 }

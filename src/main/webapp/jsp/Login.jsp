@@ -1,0 +1,67 @@
+<%-- 
+    Document   : Login
+    Created on : 13/11/2015, 00:38:03
+    Author     : heito
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Login</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="keywords" content="html5, css3, form, switch, animation, :target, pseudo-class" />
+        <meta name="author" content="Software Coffe" />
+        <link rel="stylesheet" type="text/css" href="../css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="../css/style.css" />
+        <link rel="stylesheet" type="text/css" href="../css/animate-custom.css" />
+    </head>
+    <body>
+        <div class="container">
+
+            <div class="codrops-top">
+
+                <span class="right">
+                    <a href="Home.jsp">
+                        <strong>Voltar a página Principal</strong>
+                    </a>
+                </span>
+                <div class="clr"></div>
+            </div>
+            <header>
+                <h1>Entre com o seu <span>login</span></h1>
+
+            </header>
+            <section>				
+                <div id="container_demo" >
+                    <a class="hiddenanchor" id="toregister"></a>
+                    <a class="hiddenanchor" id="tologin"></a>
+                    <div id="wrapper">
+                        <div id="login" class="animate form">
+                            <form  action="../LoginServlet" method="post" autocomplete="on"> 
+                                <h1>Login</h1> 
+                                <p> 
+                                    <label for="username" class="uname" data-icon="u" > Nome de usuário </label>
+                                    <input id="username" name="username" required="required" type="text" placeholder="Usuário"/>
+                                </p>
+                                <p> 
+                                    <label for="password" class="youpasswd" data-icon="p"> Senha </label>
+                                    <input id="password" name="password" required="required" type="password" placeholder="softwareCoffe" /> 
+                                </p>
+                                <p class="keeplogin"> 
+                                    <input type="checkbox" name="loginkeeping" id="loginkeeping" value="loginkeeping" /> 
+                                    <label for="loginkeeping">Lembrar minha senha</label>
+                                </p>
+                                <p class="login button"> 
+                                    <input type="submit"/> 
+                                </p>
+                            </form>
+                        </div>
+                    </div>
+                </div>  
+            </section>
+        </div>
+    </body>
+</html>

@@ -1,6 +1,6 @@
 <%-- 
-    Document   : Acessorios
-    Created on : 12/11/2015, 01:50:14
+    Document   : Produtos
+    Created on : 13/11/2015, 01:17:18
     Author     : heito
 --%>
 
@@ -12,7 +12,7 @@
         <meta name="keywords" content="html5, css3, form, switch, animation, :target, pseudo-class" />
         <meta name="author" content="Software Coffe" />
         <title>Sport Fitness</title>
-        <link href = "../css/Css_Acessorios.css" rel = "stylesheet" type = "text/css"/>
+        <link href = "../css/Css_Produtos.css" rel = "stylesheet" type = "text/css"/>
         <link href = "../css/dropDown.css" rel = "stylesheet" type = "text/css"/>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -55,31 +55,16 @@
                 </div>
             </nav>
         </div>
-
-        <div id="location">
-            <nav id="choice">
-                <ul>
-                    <li>
-                        <label>Acessórios</label>
-                        <a href="#">
-                            <img src="../img/Presilha_plastico_2.jpg" width="300" height="400"/>
-                        </a>
-                    </li>
-                    <li>
-                        <label>Aquecimento</label>
-                        <a href="#">
-                            <img src="../img/Cone.jpg" width="300" height="400"/>
-                        </a>
-                    </li>
-                    <li><label>Yoga</label>
-                        <a href="#">
-                            <img src="../img/Yoga.jpg" width="300" height="400"/>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
+        
+        <div id="produto">
+            <h1 id="marca"><span>MARCAS</span></h1>
+            <ul>
+                <li><input type="checkbox"/><img src="../img/Reebok.png" width="120"/></li>
+                <li><input type="checkbox"/><img src="../img/Kikos.png" width="100"/></li>
+                <li><input type="checkbox"/><img src="../img/Fit4.png" width="100"/></li>
+                <li><input type="checkbox"/><img src="../img/Movement.png" width="120"/></li>
+                <li><input type="checkbox"/><img src="../img/Physicus.png" width="100"/></li>
+            </ul>
         </div>
-
     </body>
 </html>
-

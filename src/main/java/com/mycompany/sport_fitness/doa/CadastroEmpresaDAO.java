@@ -82,7 +82,7 @@ public class CadastroEmpresaDAO extends Conexao {
                 empresa.setEstado(rs.getString("estado"));
                 empresa.setTelefone(rs.getString("telefone"));
                 empresa.setCelular(rs.getString("celular"));
-                empresa.setEmail(rs.getString("emial"));
+                empresa.setEmail(rs.getString("email"));
                 empresa.setHabilitada(rs.getBoolean("habilitada"));
                 emp.add(empresa);
             }

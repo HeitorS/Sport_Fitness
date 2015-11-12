@@ -18,22 +18,8 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author felipe
  */
-@WebServlet(name = "cadProdutoServlet", urlPatterns = {"/cadProdutoServlet"})
-public class cadProdutoServlet extends HttpServlet {
-
-    /**
-     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
-     * methods.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-
-    }
+@WebServlet(name = "ProdutoServlet", urlPatterns = {"/ProdutoServlet"})
+public class ProdutoServlet extends HttpServlet {
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
@@ -47,7 +33,6 @@ public class cadProdutoServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
     }
 
     /**
@@ -77,43 +62,31 @@ public class cadProdutoServlet extends HttpServlet {
             throws ServletException, IOException {
 
         CadastroProdutoBean cadastroBean = new CadastroProdutoBean();
-        cadastroBean.setCodigo(Integer.parseInt(request.getParameter("codigo")));
+        cadastroBean.setImg(request.getParameter("imagens").getBytes());
+        cadastroBean.setCodigo(request.getParameter("codigo"));
         cadastroBean.setNome(request.getParameter("nome"));
         cadastroBean.setCategoria(request.getParameter("categoria"));
         cadastroBean.setDescricao(request.getParameter("descricao"));
         cadastroBean.setFabricante(request.getParameter("fabricante"));
         cadastroBean.setFornecedor(request.getParameter("fornecedor"));
-        cadastroBean.setAltura(Double.parseDouble(request.getParameter("altura")));
-        cadastroBean.setLargura(Double.parseDouble(request.getParameter("largura")));
-        cadastroBean.setProfundidade(Double.parseDouble(request.getParameter("profundidade")));
-        cadastroBean.setValorCompra(Double.parseDouble(request.getParameter("valorCompra")));
-        cadastroBean.setValorVenda(Double.parseDouble(request.getParameter("valorVenda")));
-        cadastroBean.setLucro(Double.parseDouble(request.getParameter("lucro")));
+        cadastroBean.setAltura(Float.parseFloat(request.getParameter("altura")));
+        cadastroBean.setLargura(Float.parseFloat(request.getParameter("largura")));
+        cadastroBean.setProfundidade(Float.parseFloat(request.getParameter("profundidade")));
+        cadastroBean.setGasto(Float.parseFloat(request.getParameter("gastos")));
+        cadastroBean.setValorVenda(Float.parseFloat(request.getParameter("valorVenda")));
+        cadastroBean.setLucro(Float.parseFloat(request.getParameter("lucro")));
         try {
             CadastroProdutoDAO cad = new CadastroProdutoDAO() ;
             boolean verd = cad.cadastro(cadastroBean);
 
             if (verd == true) {
-                response.sendRedirect("html/Home.html");
+                response.sendRedirect("jsp/Home.jsp");
             } else {
-                response.sendRedirect("html/Cadastro_produto.html");
+                response.sendRedirect("erroJSP/erroProduto.jsp");
             }
         } catch (Exception error) {
             
         }
-//        try {
-//            CadastroProdutoDAO cad = new CadastroProdutoDAO();
-//            boolean verdade = cad.read(user, password);
-//            if (verdade) {
-//                response.sendRedirect("html/Home.html");
-//            } else {
-//                //chamar erro
-//            }
-//        } catch (Exception error) {
-//            System.out.println(error);
-//        }
-
-        processRequest(request, response);
     }
 
     /**
