@@ -64,7 +64,7 @@
                 <div>
 
                     <div id="img">
-                        <img src="../img/Site_06.png" width="170" height="100"/>
+                        <img src="../img/Site_06.png" width="160" height="90"/>
                     </div>
 
                     <div id="notificacao">
@@ -76,7 +76,7 @@
                 <div>
 
                     <div id="img">
-                        <img src="../img/Site_06.png" width="170" height="100"/>
+                        <img src="../img/Site_06.png" width="160" height="90"/>
                     </div>
 
                     <div id="notificacao">
@@ -88,7 +88,7 @@
                 <div>
 
                     <div id="img">
-                        <img src="../img/Site_06.png" width="170" height="100"/>
+                        <img src="../img/Site_06.png" width="160" height="90"/>
                     </div>
 
                     <div id="notificacao">
@@ -100,7 +100,7 @@
                 <div>
 
                     <div id="img">
-                        <img src="../img/Site_06.png" width="170" height="100"/>
+                        <img src="../img/Site_06.png" width="160" height="90"/>
                     </div>
 
                     <div id="notificacao">

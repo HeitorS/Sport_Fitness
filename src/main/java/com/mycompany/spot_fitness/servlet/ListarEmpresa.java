@@ -8,8 +8,8 @@ package com.mycompany.spot_fitness.servlet;
 import com.mycompany.sport_fitness.doa.CadastroEmpresaDAO;
 import com.mycompany.spot_fitness.entidade.CadastroEmpresaBean;
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.ArrayList;
+import java.io.PrintWriter;import java.util.ArrayList;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -35,31 +35,16 @@ public class ListarEmpresa extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
-        ArrayList<CadastroEmpresaBean> empresas = new ArrayList<CadastroEmpresaBean>();
+        //Listando os dados cadastrados na tabela empresa
         CadastroEmpresaDAO lista = new CadastroEmpresaDAO();
-        empresas = lista.read();
-        PrintWriter saida = response.getWriter();
-        for (int i = 0; i < empresas.size(); i++) {
-
-            saida.println("\nCNPJ: " + empresas.get(i).getCnpj());
-            saida.println("\nCEI: " + empresas.get(i).getCei());
-            saida.println("\nRazão Social: " + empresas.get(i).getRazaoSocial());
-            saida.println("\nNome Fantasia: " + empresas.get(i).getNomeFantasia());
-            saida.println("\nDono/Gerente Filial: " + empresas.get(i).getDono());
-            saida.println("\nEndereço: " + empresas.get(i).getEndereco());
-            saida.println("\nNúmero: " + empresas.get(i).getNumero());
-            saida.println("\nComplemento: " + empresas.get(i).getComplemento());
-            saida.println("\nBairro: " + empresas.get(i).getBairro());
-            saida.println("\nCEP: " + empresas.get(i).getCep());
-            saida.println("\nCidade: " + empresas.get(i).getCidade());
-            saida.println("\nEstado: " + empresas.get(i).getEstado());
-            saida.println("\nTelefone: " + empresas.get(i).getTelefone());
-            saida.println("\nCelular: " + empresas.get(i).getCelular());
-            saida.println("\nEmail: " + empresas.get(i).getEmail());
-            saida.println("\n====================================================================\n\n\n");
-
-        }
+        ArrayList<CadastroEmpresaBean> empresas = lista.read();
+        
+        //Gerando uma caixa com os arquivos
+        request.setAttribute("lista", empresas);
+        
+        //Endereçando a caixa com os arquivos e enviando para o jsp
+        RequestDispatcher arquivos = request.getRequestDispatcher("jsp/ListarEmpresa.jsp");
+        arquivos.forward(request, response);
     }
 
     /**

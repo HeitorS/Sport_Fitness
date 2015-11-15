@@ -11,6 +11,7 @@ package com.mycompany.spot_fitness.entidade;
  */
 public class CadastroEmpresaBean {
 
+    private int id;
     private String cnpj;
     private String cei;
     private String razaoSocial;
@@ -27,6 +28,14 @@ public class CadastroEmpresaBean {
     private String celular;
     private String email;
     private boolean habilitada;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getCnpj() {
         return cnpj;

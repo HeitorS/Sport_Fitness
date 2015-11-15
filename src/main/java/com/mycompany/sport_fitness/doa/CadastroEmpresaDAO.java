@@ -68,6 +68,7 @@ public class CadastroEmpresaDAO extends Conexao {
             rs = pst.executeQuery();
             while (rs.next()) {
                 CadastroEmpresaBean empresa = new CadastroEmpresaBean();
+                empresa.setId(rs.getInt("codEmp"));
                 empresa.setCnpj(rs.getString("cnpj"));
                 empresa.setCei(rs.getString("cei"));
                 empresa.setRazaoSocial(rs.getString("razaoSocial"));

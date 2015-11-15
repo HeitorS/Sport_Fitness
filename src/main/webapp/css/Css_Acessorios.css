@@ -1,6 +1,6 @@
 html{
     margin:0px;
-    background: url("../img/Site_04.jpg") no-repeat;
+    background: url("../img/Site_04.jpg") no-repeat fixed;
     background-size: cover; 
 }
 
@@ -54,7 +54,7 @@ html{
 input#inputBusca{
     display: block;
     position: absolute;
-    width: 750px;
+    width: 690px;
     height: 20px;
     top: 27px;
     left: 370px;
@@ -85,7 +85,7 @@ input#inputBusca{
 }
 
 #choice{
-    margin: 10px 50px 10px 80px;
+    margin: 10px 0px 10px 0px;
 }
 
 #choice-wrapper{

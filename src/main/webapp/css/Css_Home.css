@@ -54,7 +54,7 @@ html{
 input#inputBusca{
     display: block;
     position: absolute;
-    width: 750px;
+    width: 650px;
     height: 20px;
     top: 27px;
     left: 370px;
@@ -110,7 +110,7 @@ input#inputBusca{
     position: relative;
     left: 5px;
     width: 390px;
-    height: 100px;
+    height: 96px;
     background: #555;
     margin-top: 10px;
 }
@@ -131,16 +131,18 @@ input#inputBusca{
     color: black;
 }
 #noticia div #notificacao{
-    
+    position: relative;
+    top: -30px;
+    font-size: 12pt;
 }
 
 #slideShow{
     display: block;
     position: absolute;
     top: 175px;
-    left: 50px;
+    left: 20px;
     bottom: 50px;
-    width: 850px;
+    width: 820px;
     background: #333;
     border-radius: 5px; 
     background-image: url(../img/Site_02.jpg);

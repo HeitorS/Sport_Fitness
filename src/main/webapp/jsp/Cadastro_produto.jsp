@@ -12,31 +12,44 @@
         <meta charset="UTF-8" >
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="../css/style_cadastro_produtos.css" type="text/css" rel="stylesheet"/>
+        <link href="../css/dropDowmCadastro.css" type="text/css" rel="stylesheet">
     </head>
-    <body >
+    <body>
+        <div id="menu">
+            <nav id="nav">
+                <div id="nav-wrapper">
+                    <ul>
+                        <li><a href="Home.jsp">Home</a></li><li>
+                            <a href="Cadastro_produto.jsp">Cadastrar</a></li><li>
+                            <a href="#">Alterar</a></li><li>
+                            <a href="#">Listar</a></li><li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
         <form action="../ProdutoServlet" method="post">
-            <div class="painel">
+            <div id="form" class="painel">
 
                 <fieldset class="principais">
                     <header>
                         <h1>CADASTRO DE <span>PRODUTOS</span></h1>
                     </header>
                     <p class="financeiro"><b>Dados principais do produtos</b></p>
-                    <div id="img">
+                    <div id="form" class="img">
                         <img src="../img/imagem.png"/>
                     </div>
-                    <div>
+                    <div id="form">
                         <input type="file" name="imagens" accept="image/gif, image/jpeg, image/png"/>
                     </div>
-                    <div>
+                    <div id="form">
                         <label for="id">Código de barra:</label>
                         <input type="text" placeholder="7671283871267365121312" id="codigo" name="codigo" size="30" style="text-align: center;"/>
                     </div>
-                    <div>
+                    <div id="form">
                         <label for="nome">Nome:</label>
                         <input type="text" placeholder="Suporte de Barra de parede"  id="nome" name="nome" size="70"/>
                     </div>
-                    <div>
+                    <div id="form">
                         <label for="categoria">Categoria:</label>
                         <select name="categoria">
                             <option>Acessórios</option>
@@ -46,33 +59,33 @@
                             <option>Roupas</option>
                         </select>
                     </div>
-                    <div>
+                    <div id="form">
                         <label for="descricao">Descrição:</label>
                         <input type="text" placeholder="Suporte para pendurar todos os tipos de barras" id="descricao" name="descricao" size="66"/>
                     </div>
-                    <div>
+                    <div id="form">
                         <label for="fabricante">Fabricante:</label>
                         <input type="text" placeholder="Fundição"  id="fabricante" name="fabricante" size="65"/>
                     </div>
-                    <div>
+                    <div id="form">
                         <label for="fabricante">Fornecedor:</label>
                         <input type="text" placeholder="Fassa Fit"  id="fornecedor" name="fornecedor" size="64"/>
                     </div>
                     <hr/>
                     <p class="financeiro"><b>Dados complementares</b></p>
-                    <div>
+                    <div id="form">
                         <label for="altura">Altura:</label>
                         <input type="text" placeholder=" 250 cm"  id="altura" name="altura" size="10"/>
                         <label for="largura">Largura:</label>
                         <input type="text" placeholder=" 100 cm"  id="largura" name="largura" size="10"/>
                     </div>
-                    <div>
+                    <div id="form">
                         <label for="altura">Profundidade:</label>
                         <input type="text"  placeholder=" 50 cm" id="profundidade" name="profundidade" size="10"/>
                     </div>
                     <hr/>
                     <p class="financeiro"><b>Financeiro</b></p>
-                    <div>
+                    <div id="form">
                         <label for="Gastos">Gastos: (R$)</label>
                         <input type="text" placeholder=" 50,00" id="gastos" name="gastos" size="8"/>
                         <label for="valorVenda">Valor da venda: (R$)</label>
@@ -83,7 +96,6 @@
                     <div class="botao_centro">
                         <button class="botao" type="submit">Salvar</button>
                         <button class="botao" type="button">Limpar</button>
-                        <a href="Home.jsp"><button class="botao" type="button">Voltar</button></a>
                     </div>
                 </fieldset>
             </div>

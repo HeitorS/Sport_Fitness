@@ -56,7 +56,7 @@ public class LoginServlet extends HttpServlet {
             LoginDAO creat = new LoginDAO();
             boolean verdade = creat.read(login.getNameUser(),login.getPasUser());
             if (verdade) {
-                response.sendRedirect("html/Home.html");
+                response.sendRedirect("jsp/Home.jsp");
             } else {
                 response.sendRedirect("jsp/erroLogin.jsp");
             }

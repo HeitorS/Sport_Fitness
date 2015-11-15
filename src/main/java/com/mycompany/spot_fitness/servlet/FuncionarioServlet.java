@@ -93,7 +93,7 @@ public class FuncionarioServlet extends HttpServlet {
                 login.setCodFun(funcionario.selectID(fun));
                 LoginDAO criar = new LoginDAO();
                 criar.create(login);
-                response.sendRedirect("html/Home.html");
+                response.sendRedirect("jsp/Home.jsp");
             }
         } catch (Exception e) {
             response.sendRedirect("jsp/erroFuncionario.jsp");
