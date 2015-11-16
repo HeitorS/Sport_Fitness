@@ -15,58 +15,21 @@
         <link href="../css/Listas.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-        <h1>Lista dos Dados cadastrados</h1>
-        <form>
-            <a href="Acessorios.jsp"><button>Voltar</button></a>
-        </form>
-        
-        <table border="1" style="margin-top: 10px;">
+        <table rules="rows">
             <tr>
-                <th>ID</th>
-                <th>CNPJ</th>
-                <th>CEI</th>
+                <th id="first">ID</th>
                 <th>Razão Social</th>
                 <th>Nome Fantasia</th>
                 <th>Dono</th>
-                <th>Endereço</th>
-                <th>Numero</th>
-                <th>Complemento</th>
-                <th>Bairro</th>
                 <th>CEP</th>
                 <th>Cidade</th>
                 <th>Estado</th>
                 <th>Telefone</th>
                 <th>Celular</th>
-                <th>Email</th>
-                <th>Habilitado</th>
+                <th>E-mail</th>
+                <th id="last">Ativo</th>
             </tr>
-            <%
-                ArrayList<CadastroEmpresaBean> empresas = (ArrayList<CadastroEmpresaBean>) request.getAttribute("lista");
-
-                for (CadastroEmpresaBean empresa : empresas) {
-            %>
-            <tr>
-                <td><%= empresa.getId()%></td>
-                <td><%= empresa.getCnpj()%></td>
-                <td><%= empresa.getCei()%></td>
-                <td><%= empresa.getRazaoSocial()%></td>
-                <td><%= empresa.getNomeFantasia()%></td>
-                <td><%= empresa.getDono()%></td>
-                <td><%= empresa.getEndereco()%></td>
-                <td><%= empresa.getNumero()%></td>
-                <td><%= empresa.getComplemento()%></td>
-                <td><%= empresa.getBairro()%></td>
-                <td><%= empresa.getCep()%></td>
-                <td><%= empresa.getCidade()%></td>
-                <td><%= empresa.getEstado()%></td>
-                <td><%= empresa.getTelefone()%></td>
-                <td><%= empresa.getCelular()%></td>
-                <td><%= empresa.getEmail()%></td>
-                <td><%= empresa.isHabilitada()%></td>
-            </tr>
-
-            <%}%>
+            
         </table>
-        
     </body>
 </html>

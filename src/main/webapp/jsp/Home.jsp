@@ -48,9 +48,27 @@
                             <a href="" style="font-size: 18pt;"><b>+</b>
                                 <img src="../img/arrow_dowm.png" height="20" width="20"/></a>
                             <ul>
-                                <li><a href="Cadastro_empresa.jsp">Empresa</a></li>
-                                <li><a href="Cadastro_produto.jsp">Produto</a></li>
-                                <li><a href="Cadastro_funcionario.jsp">Funcionário</a></li>
+                                <li><a href="">Empresa<img src="../img/arrow_dowm.png" height="20" width="20"/></a>
+                                    <ul>
+                                        <li><a href="Cadastro_empresa.jsp">Cadastrar Empresa</a></li>
+                                        <li><a href="">Alterar Empresa</a></li>
+                                        <li><a href="ListarEmpresa.jsp">Listar Empresa</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="">Produto<img src="../img/arrow_dowm.png" height="20" width="20"/></a>
+                                    <ul>
+                                        <li><a href="Cadastro_produto.jsp">Cadastrar Produto</a></li>
+                                        <li><a href="">Alterar Produto</a></li>
+                                        <li><a href="">Listar Produto</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="">Funcionário<img src="../img/arrow_dowm.png" height="20" width="20"/></a>
+                                    <ul>
+                                        <li><a href="Cadastro_funcionario.jsp">Cadastrar Funcionário</a></li>
+                                        <li><a href="">Alterar Funcionário</a></li>
+                                        <li><a href="">Listar Funcionário</a></li>
+                                    </ul>
+                                </li>
                             </ul>
                         </li>
                     </ul>
