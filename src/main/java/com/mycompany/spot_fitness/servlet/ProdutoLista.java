@@ -5,10 +5,10 @@
  */
 package com.mycompany.spot_fitness.servlet;
 
-import com.mycompany.sport_fitness.doa.CadastroEmpresaDAO;
-import com.mycompany.spot_fitness.entidade.CadastroEmpresaBean;
+import com.mycompany.sport_fitness.doa.CadastroProdutoDAO;
+import com.mycompany.spot_fitness.entidade.CadastroProdutoBean;
 import java.io.IOException;
-import java.io.PrintWriter;import java.util.ArrayList;
+import java.util.List;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -20,8 +20,8 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author heito
  */
-@WebServlet(name = "ListarEmpresa", urlPatterns = {"/ListarEmpresa"})
-public class ListarEmpresa extends HttpServlet {
+@WebServlet(name = "ProdutoLista", urlPatterns = {"/ProdutoLista"})
+public class ProdutoLista extends HttpServlet {
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
@@ -35,16 +35,16 @@ public class ListarEmpresa extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        //Listando os dados cadastrados na tabela empresa
-        CadastroEmpresaDAO lista = new CadastroEmpresaDAO();
-        ArrayList<CadastroEmpresaBean> empresas = lista.read();
         
-        //Gerando uma caixa com os arquivos
-        request.setAttribute("lista", empresas);
+        //Buscando os dados no banco e atribuindo a uma lista
+        CadastroProdutoDAO produtos = new CadastroProdutoDAO();
+        List<CadastroProdutoBean> listaProdutos = produtos.read();
+        //Criando uma variaável para levar essa lista até o JSP
+        request.setAttribute("lista", listaProdutos);
+        //enviando a lista para o JSP endereçado
+        RequestDispatcher rq = request.getRequestDispatcher("jsp/ProdutoLista.jsp");
+        rq.forward(request, response);
         
-        //Endereçando a caixa com os arquivos e enviando para o jsp
-        RequestDispatcher arquivos = request.getRequestDispatcher("jsp/ListarEmpresa.jsp");
-        arquivos.forward(request, response);
     }
 
     /**

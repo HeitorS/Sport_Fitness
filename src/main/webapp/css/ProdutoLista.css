@@ -1,0 +1,109 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 18/11/2015, 09:30:00
+    Author     : Heitor Victor
+*/
+
+html{
+    padding: 0px;
+    margin: 0px;
+    overflow-y: scroll;
+    background: url(../img/Site_04.jpg) no-repeat fixed;
+    background-size: cover;
+}
+
+body{
+    padding: 5px;
+    margin: 0px;
+}
+#tabela{
+    position: relative;
+
+    margin-bottom: 5px;
+    
+    
+    border-radius: 50px;
+    z-index: 10;
+}
+
+#tabela table{
+    position: relative;
+    margin: auto;
+    width: 100%;
+}
+#busca{
+    position: fixed;
+    background: black;
+    margin-bottom: 5px;
+    left: 25%;
+    width: 600px;
+    height: 50px;
+    border-radius: 50px;
+    z-index: 10;
+}
+
+#busca input{
+    position: relative;
+    width: 500px;
+    top: 23%;
+    left: 15px;
+    box-shadow: 1px 1px 0px 0px black;
+}
+
+#busca button{
+    position: relative;
+    right: -20px;
+    top: 23%;
+}
+#tabela{
+    position: relative;
+    top: 70px;
+    display: block;
+    left: 1px;
+    right: 1px;
+}
+
+#tabela table{
+    font-family: "BebasNeueRegular","Arial Narrow",Arial,sans-serif;
+    font-size: 10pt;
+}
+
+#tabela table tr th,td{
+    padding-left: 1px;
+    padding-right: 1px;
+    padding: 2px;
+    text-align: center;
+}
+
+#tabela table tr th{
+    background-color: #000;
+    color: white;
+    padding: 5px;
+    height: 30px;
+    font-size: 13pt;
+}
+
+#tabela table tr:nth-child(odd){
+    background-color: #B5B5B5;
+}
+
+#tabela table tr:nth-child(even){
+    background-color: white;
+}
+
+#tabela table tr td{
+    height: 40px;
+    height: 30px;
+}
+
+#adicionar{
+    position: relative;
+    top: 70px;
+    width: 40px;
+    margin-top: 10px;
+    left: 95%;
+}

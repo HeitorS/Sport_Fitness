@@ -46,9 +46,27 @@
                             <a href="" style="font-size: 18pt;"><b>+</b>
                                 <img src="../img/arrow_dowm.png" height="20" width="20"/></a>
                             <ul>
-                                <li><a href="Cadastro_empresa.jsp">Empresa</a></li>
-                                <li><a href="Cadastro_produto.jsp">Produto</a></li>
-                                <li><a href="Cadastro_funcionario.jsp">Funcionário</a></li>
+                                <li><a href="">Empresa<img src="../img/arrow_dowm.png" height="20" width="20"/></a>
+                                    <ul>
+                                        <li><a href="Cadastro_empresa.jsp">Cadastrar Empresa</a></li>
+                                        <li><a href="">Alterar Empresa</a></li>
+                                        <li><a href="ListarEmpresa.jsp">Listar Empresa</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="">Produto<img src="../img/arrow_dowm.png" height="20" width="20"/></a>
+                                    <ul>
+                                        <li><a href="Cadastro_produto.jsp">Cadastrar Produto</a></li>
+                                        <li><a href="">Alterar Produto</a></li>
+                                        <li><a href="../ProdutoLista">Listar Produto</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="">Funcionário<img src="../img/arrow_dowm.png" height="20" width="20"/></a>
+                                    <ul>
+                                        <li><a href="Cadastro_funcionario.jsp">Cadastrar Funcionário</a></li>
+                                        <li><a href="">Alterar Funcionário</a></li>
+                                        <li><a href="">Listar Funcionário</a></li>
+                                    </ul>
+                                </li>
                             </ul>
                         </li>
                     </ul>
@@ -56,29 +74,13 @@
             </nav>
         </div>
 
-        <div id="location">
-            <nav id="choice">
-                <ul>
-                    <li>
-                        <label>Acessórios</label>
-                        <a href="#">
-                            <img src="../img/Presilha_plastico_2.jpg" width="300" height="400"/>
-                        </a>
-                    </li>
-                    <li>
-                        <label>Aquecimento</label>
-                        <a href="#">
-                            <img src="../img/Cone.jpg" width="300" height="400"/>
-                        </a>
-                    </li>
-                    <li><label>Yoga</label>
-                        <a href="#">
-                            <img src="../img/Yoga.jpg" width="300" height="400"/>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
+        <section id="choices">
+            <ul>
+                <a href=""><li id="choice1"><p>Acessórios</p></li></a>
+                <a href=""><li id="choice2"><p>Protetores</p></li></a>
+                <a href=""><li id="choice3"><p>Tapetes</p></li></a>
+            </ul>
+        </section>
 
     </body>
 </html>

@@ -77,57 +77,68 @@ input#inputBusca{
     color: black;
 }
 
-#location{
-    display: block;
+#choices{
     position: absolute;
-    top: 170px;
-    z-index: -10;
-}
-
-#choice{
-    margin: 10px 0px 10px 0px;
-}
-
-#choice-wrapper{
-    position: static;
+    text-align: center;
+    top: 35%;
     left: 0px;
     right: 0px;
-    margin: 0px;
-    text-align: left;
+    width: 1250px;
+    height: 350px;
+    margin: auto;
 }
 
-#choice ul{
-    list-style-type: none;
+#choices p{
+    font-family: Harlow Solid Italic,sans-serif;
+    font-size: 15pt;
+    background: rgba(255,255,255,0.6);
+    text-align: center;
+    padding: 3px;
+    opacity: 0.6;
+    color: black;
+    width: 150px;
+    border-radius: 50px;
+    margin: auto;
+    position: relative;
+    bottom: -80%;
+}
+
+#choices ul{
+    display: block;
+    list-style: none;
     padding: 0px;
     margin: 0px;
-    position: relative;
 }
 
-#choice ul li img{
-    vertical-align: middle;
-    padding-left: 5px;
-    margin: 0px;
-}
-#choice ul li{
+#choices ul li{
     display: inline-block;
-    text-align: center;
-    font-size: 15pt;
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    border-radius: 5px; 
 }
 
-#choice ul li:hover{
-    background-color: #93f7fd;
+#choices ul li:hover{
+    border-radius: 100%;
+    position: relative;
+    top: -50px;
+    width: 400px;
+    height: 400px;
+    transition: 1s;
+    background-size: cover;
 }
 
-#choice ul li a,visited{
-    color: #ccc;
-    display: block;
-    padding: 15px;
-    padding-left:51px;
-    padding-right: 51px;
-    text-decoration: none;
+#choice1{
+    background: url(../img/Presilha_plastico_2.jpg) no-repeat ;
+    background-size: cover;
 }
 
-#choice ul li a:hover{
-    color: #ccc;
-    text-decoration: none;
+#choice2{
+    background: url(../img/Protetor.jpg);
+    background-size: cover;
+}
+
+#choice3{
+    background: url(../img/Yoga.jpg);
+    background-size: cover;
 }

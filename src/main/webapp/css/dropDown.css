@@ -14,7 +14,7 @@ body{
     left: 0px;
     right: 0px;
     margin: 0px;
-    text-align: left;
+    text-align: center;
 }
 
 #nav ul{
@@ -40,17 +40,12 @@ body{
     color: #ccc;
     display: block;
     padding: 15px;
-    padding-left:31px;
-    padding-right: 51px;
+    padding-left:40px;
+    padding-right: 40px;
     text-decoration: none;
 }
 
-#nav ul li a:hover{
-    color: #ccc;
-    text-decoration: none;
-}
-
-#nav ul li:hover ul{
+#nav ul li:hover > ul{
     display: block;  
 }
 
@@ -60,7 +55,7 @@ body{
     background-color: #333;
     border: 5px solid #222;
     border-top: 0px;
-    right: 6px;
+    right: 77px;
     margin-left: -5px;
 }
 
@@ -74,4 +69,19 @@ body{
 
 #nav ul ul li a:hover{
     color: #099;
+}
+
+#nav ul ul li:hover ul{
+    display: block;
+    margin-top: -64px;
+}
+
+#nav ul ul ul {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    border: 5px solid #222;
+    right: 240px;
+    margin-left: -5px;
+    z-index: 10;
 }

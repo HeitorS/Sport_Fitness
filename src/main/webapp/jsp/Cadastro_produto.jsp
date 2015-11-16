@@ -13,6 +13,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="../css/style_cadastro_produtos.css" type="text/css" rel="stylesheet"/>
         <link href="../css/dropDowmCadastro.css" type="text/css" rel="stylesheet">
+        <script src="../js/carregarFoto.js" type="text/javascript"></script>
     </head>
     <body>
         <div id="menu">
@@ -36,10 +37,11 @@
                     </header>
                     <p class="financeiro"><b>Dados principais do produtos</b></p>
                     <div id="form" class="img">
-                        <img src="../img/imagem.png"/>
+                        <img class = "imagem" src="../img/imagem.png"/>
                     </div>
                     <div id="form">
-                        <input type="file" name="imagens" accept="image/gif, image/jpeg, image/png"/>
+                        <input type="file" id="imagens" name="imagens" accept="image/gif, image/jpeg, image/png"/>
+                        <input type="button" value="upload" onclick="myFunction()">
                     </div>
                     <div id="form">
                         <label for="id">Código de barra:</label>
