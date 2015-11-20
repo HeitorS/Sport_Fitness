@@ -1,0 +1,40 @@
+html{
+    margin: 0px;
+    padding: 0px;
+    background: url(../img/Site_04.jpg) no-repeat fixed;
+    background-size: cover; 
+}
+table{
+    display: block;
+    width: 100%;
+    border-left: none;
+    border-right: none;
+    margin: 5px;
+    border-radius: 10px;
+    font-family: sans-serif Times New Roman;
+    font-size: 12pt;
+    border-radius: 5px;
+}
+
+th{
+    text-align: center;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: white;
+    background-color: blue;
+}
+
+td{
+    padding: 7px;
+    text-align: left;   
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: #ccc;
+}
+
+tr:nth-child(odd) {
+    background-color: #fff;
+}
