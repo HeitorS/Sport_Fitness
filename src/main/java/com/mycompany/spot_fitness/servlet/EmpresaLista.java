@@ -8,6 +8,9 @@ package com.mycompany.spot_fitness.servlet;
 import com.mycompany.sport_fitness.doa.CadastroEmpresaDAO;
 import com.mycompany.spot_fitness.entidade.CadastroEmpresaBean;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -16,10 +19,10 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author felipe
+ * @author heito
  */
-@WebServlet(name = "EmpresaServlet", urlPatterns = {"/EmpresaServlet"})
-public class EmpresaServlet extends HttpServlet {
+@WebServlet(name = "EmpresaLista", urlPatterns = {"/EmpresaLista"})
+public class EmpresaLista extends HttpServlet {
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
@@ -33,6 +36,40 @@ public class EmpresaServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+
+        if (request.getParameter("acao").equals("listar")) {
+            //Buscando os dados no banco e atribuindo a uma lista
+            CadastroEmpresaDAO empresas = new CadastroEmpresaDAO();
+            List<CadastroEmpresaBean> listaEmpresas = empresas.read();
+            //Criando uma variaável para levar essa lista até o JSP
+            request.setAttribute("lista", listaEmpresas);
+            //enviando a lista para o JSP endereçado
+            RequestDispatcher rq = request.getRequestDispatcher("jsp/ListarEmpresa.jsp");
+            rq.forward(request, response);
+        } else if (request.getParameter("acao").equals("exc")) {
+            System.out.println("passei aqui");
+            CadastroEmpresaDAO empresas = new CadastroEmpresaDAO();            
+            empresas.delete(request.getParameter("cnpj"));
+            //Buscando os dados no banco e atribuindo a uma lista
+            List<CadastroEmpresaBean> listaEmpresas = empresas.read();
+            //Criando uma variaável para levar essa lista até o JSP
+            request.setAttribute("lista", listaEmpresas);
+            //enviando a lista para o JSP endereçado
+            RequestDispatcher rq = request.getRequestDispatcher("jsp/ListarEmpresa.jsp");
+            rq.forward(request, response);
+        }else if(request.getParameter("acao").equals("alt")){
+            CadastroEmpresaDAO busca = new CadastroEmpresaDAO();
+            String cnpj = request.getParameter("cnpj");
+            List<CadastroEmpresaBean> empresas = new ArrayList<CadastroEmpresaBean>();
+            CadastroEmpresaBean empresa = busca.search(cnpj);
+            empresas.add(empresa);
+            request.setAttribute("empresa", empresas);
+            //enviando a lista para o JSP endereçado
+            RequestDispatcher rq = request.getRequestDispatcher("jsp/Alteracao_empresa.jsp");
+            rq.forward(request, response);
+            
+        }
+        
     }
 
     /**
@@ -49,30 +86,16 @@ public class EmpresaServlet extends HttpServlet {
         CadastroEmpresaBean empresa = new CadastroEmpresaBean();
 
         empresa.setCnpj(request.getParameter("cnpj"));
-        empresa.setRazaoSocial(request.getParameter("razaoSocial"));
         empresa.setNomeFantasia(request.getParameter("nomeFantasia"));
         empresa.setDono(request.getParameter("dono"));
-        empresa.setEndereco(request.getParameter("endereco"));
-        empresa.setNumero(Integer.parseInt(request.getParameter("numero")));
-        empresa.setComplemento(request.getParameter("complemento"));
-        empresa.setBairro(request.getParameter("bairro"));
-        empresa.setCep(request.getParameter("cep"));
-        empresa.setCidade(request.getParameter("cidade"));
-        empresa.setEstado(request.getParameter("estado"));
         empresa.setTelefone(request.getParameter("telefone"));
         empresa.setCelular(request.getParameter("celular"));
         empresa.setEmail(request.getParameter("email"));
-        String a = request.getParameter("habilitado");
-        if (a=="H") {
-            empresa.setHabilitada(true);
-        } else {
-            empresa.setHabilitada(false);
-        }
         try {
             CadastroEmpresaDAO emp = new CadastroEmpresaDAO();
-            boolean verd = emp.create(empresa);
+            boolean verd = emp.update(empresa);
             if (verd) {
-                response.sendRedirect("jsp/Home.jsp");
+                response.sendRedirect("jsp/ListarEmpresa.jsp");
             } else {
                 response.sendRedirect("erroJSP/erroEmpresa.jsp");
             }
@@ -80,6 +103,7 @@ public class EmpresaServlet extends HttpServlet {
             System.out.println("\n\n\n\n" + error + "\n\n\n\n");
             response.sendRedirect("erroJSP/erroEmpresa.jsp");
         }
+
     }
 
     /**

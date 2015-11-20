@@ -35,6 +35,9 @@
                     <header>
                         <h1>CADASTRO DE <span>PRODUTOS</span></h1>
                     </header>
+                    <c:forEach items="${menssagem}" var="item" varStatus="stat">
+                        <c:out value="${messagem}" />
+                    </c:forEach>
                     <p class="financeiro"><b>Dados principais do produtos</b></p>
                     <div id="form" class="img">
                         <img class = "imagem" src="../img/imagem.png"/>
@@ -54,11 +57,11 @@
                     <div id="form">
                         <label for="categoria">Categoria:</label>
                         <select name="categoria">
-                            <option>Acessórios</option>
-                            <option>Suportes</option>
-                            <option>Produtos</option>
-                            <option>Serviços</option>
-                            <option>Roupas</option>
+                            <option>Acessório</option>
+                            <option>Suporte</option>
+                            <option>Produto</option>
+                            <option>Serviço</option>
+                            <option>Roupa</option>
                         </select>
                     </div>
                     <div id="form">
@@ -97,7 +100,7 @@
                     </div>
                     <div class="botao_centro">
                         <button class="botao" type="submit">Salvar</button>
-                        <button class="botao" type="button">Limpar</button>
+                        <button class="botao" type="reset">Limpar</button>
                     </div>
                 </fieldset>
             </div>

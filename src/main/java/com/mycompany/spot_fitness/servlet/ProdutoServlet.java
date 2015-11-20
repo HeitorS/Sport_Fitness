@@ -8,6 +8,7 @@ package com.mycompany.spot_fitness.servlet;
 import com.mycompany.sport_fitness.doa.CadastroProdutoDAO;
 import com.mycompany.spot_fitness.entidade.CadastroProdutoBean;
 import java.io.IOException;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -69,23 +70,25 @@ public class ProdutoServlet extends HttpServlet {
         cadastroBean.setDescricao(request.getParameter("descricao"));
         cadastroBean.setFabricante(request.getParameter("fabricante"));
         cadastroBean.setFornecedor(request.getParameter("fornecedor"));
-        cadastroBean.setAltura(Float.parseFloat(request.getParameter("altura")));
-        cadastroBean.setLargura(Float.parseFloat(request.getParameter("largura")));
-        cadastroBean.setProfundidade(Float.parseFloat(request.getParameter("profundidade")));
-        cadastroBean.setGasto(Float.parseFloat(request.getParameter("gastos")));
-        cadastroBean.setValorVenda(Float.parseFloat(request.getParameter("valorVenda")));
-        cadastroBean.setLucro(Float.parseFloat(request.getParameter("lucro")));
+        cadastroBean.setAltura(Double.parseDouble(request.getParameter("altura")));
+        cadastroBean.setLargura(Double.parseDouble(request.getParameter("largura")));
+        cadastroBean.setProfundidade(Double.parseDouble(request.getParameter("profundidade")));
+        cadastroBean.setGasto(Double.parseDouble(request.getParameter("gastos")));
+        cadastroBean.setValorVenda(Double.parseDouble(request.getParameter("valorVenda")));
+        cadastroBean.setLucro(Double.parseDouble(request.getParameter("lucro")));
+        cadastroBean.setHabilitado(true);
         try {
             CadastroProdutoDAO cad = new CadastroProdutoDAO() ;
             boolean verd = cad.cadastro(cadastroBean);
 
             if (verd == true) {
-                response.sendRedirect("jsp/Home.jsp");
+//                
+                response.sendRedirect("jsp/Cadastro_produto.jsp");
             } else {
                 response.sendRedirect("erroJSP/erroProduto.jsp");
             }
         } catch (Exception error) {
-            
+            response.sendRedirect("erroJSP/erroProduto.jsp");
         }
     }
 
@@ -98,5 +101,8 @@ public class ProdutoServlet extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
+
+    
+    
 
 }

@@ -40,7 +40,7 @@
                         <li><a href="Home.jsp">Home</a></li><li>
                             <a href="Acessorios.jsp">Acessórios</a></li><li>
                             <a href="Suportes.jsp">Suportes</a></li><li>
-                            <a href="Produtos.jsp">Produtos</a></li><li>
+                            <a href="../Produtos">Produtos</a></li><li>
                             <a href="Servicos.jsp">Serviços</a></li><li>
                             <a href="Roupas.jsp">Roupas</a></li><li>
                             <a href="" style="font-size: 18pt;"><b>+</b>

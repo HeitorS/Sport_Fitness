@@ -27,6 +27,8 @@ public class CadastroProdutoBean {
     private double gasto;
     private double valorVenda;
     private double lucro;
+    // estado do produto
+    private boolean habilitado;
 
     public int getId() {
         return id;
@@ -138,6 +140,14 @@ public class CadastroProdutoBean {
 
     public void setLucro(double lucro) {
         this.lucro = lucro;
+    }
+
+    public boolean isHabilitado() {
+        return habilitado;
+    }
+
+    public void setHabilitado(boolean habilitado) {
+        this.habilitado = habilitado;
     }
 
 }

@@ -28,7 +28,7 @@
             </nav>
         </div>
         
-        <form action="../EmpresaServlet" method="post">
+        <form action="../EmpresaServlet" method="post" accept-charset="ISO-8859-1,UTF-8">
             <div id="form" class="painel">
 
                 <fieldset class="principais">
